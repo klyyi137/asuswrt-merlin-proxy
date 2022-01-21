@@ -247,15 +247,15 @@ tar xzvf /opt/etc/kcptun-linux-arm7-20210922.tar.gz -C /opt/bin/
 
 ```
 {
-"localaddr": "127.0.0.1:8389",
+"localaddr": "0.0.0.0:8389",
 "remoteaddr": "KCPTUN-SERVER-ADDRESS:4000",
 "key": "1234567890",
 "crypt": "salsa20",
 "mode": "manual",
 "conn": 1,
 "mtu": 1400,
-"sndwnd": 128,
-"rcvwnd": 1024,
+"sndwnd": 512,
+"rcvwnd": 512,
 "datashard": 0,
 "parityshard": 0,
 "dscp": 46,
@@ -300,7 +300,7 @@ PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 {
     "server":"127.0.0.1",
     "server_port":8389,
-    "local_address":"192.168.1.1",
+    "local_address":"0.0.0.0",
     "local_port":1080,
     "password":"password",
     "timeout":60,
