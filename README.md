@@ -1,10 +1,10 @@
 # ASUS Merlin 路由器科学上网
 
-更新时间：2017年4月26日 :cat:
+更新时间：2021年1月21日 :cat:
 
 ## 准备工作
 
-1. 一台刷上 ASUS Merlin 的华硕路由器，我使用的是 ASUS RT-AC68U。
+1. 一台刷上 ASUS Merlin 的华硕路由器，我使用的是 ASUS RT-AC86U。
 
 2. Shadowsocks 服务端，需启用 UDP Relay。使用 Docker 部署，可以看[docker-compose.yml](https://github.com/xzdbd/dockerfiles/blob/master/shadowsocks-go/docker-compose.yml)。
 
@@ -239,8 +239,8 @@ cru a run-services "*/1 * * * *" "/jffs/scripts/services-start"
 下载 kcptun 最新 [release](https://github.com/xtaci/kcptun/releases)，需要根据路由器 CPU 架构来选择 arm 或者 mips 。
 
 ```
-wget -O /opt/etc/ https://github.com/xtaci/kcptun/releases/download/v20170329/kcptun-linux-arm-20170329.tar.gz
-tar xzvf opt/etc/kcptun-linux-arm-20170329.tar.gz -C /opt/bin/
+wget -O /opt/etc/ https://github.com/xtaci/kcptun/releases/download/v20210922/kcptun-linux-arm7-20210922.tar.gz
+tar xzvf /opt/etc/kcptun-linux-arm7-20210922.tar.gz -C /opt/bin/
 ```
 
 新建 kcptun 配置文件 ``/opt/etc/kcptun-router.json`` 。参数根据需要进行调整。KCPTUN-SERVER-ADDRESS 改为 kcptun 服务端的 IP 。
