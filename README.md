@@ -273,7 +273,7 @@ tar xzvf /opt/etc/kcptun-linux-arm7-20210922.tar.gz -C /opt/bin/
 新建 S22kcptun 服务脚本 ``/opt/etc/init.d/S22kcptun``
 
 注: 1、梅林服务名必须是 “S” 开头,不然无法启动
-    2、遇执行时 not found 错误时 ，执行 '''vim /opt/etc/init.d/S22kcptun''' 后''':set ff=unix'''
+    2、遇执行时 not found 错误时 ，执行 ``vim /opt/etc/init.d/S22kcptun`` 后``:set ff=unix``
     
 ```
 #!/bin/sh
