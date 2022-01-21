@@ -314,8 +314,6 @@ PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 
 [使用华硕 merlin 架设透明代理](https://github.com/zw963/asuswrt-merlin-transparent-proxy)
 
-[使用 Asus Merlin 实现路由器翻墙](https://github.com/onlyice/asus-merlin-cross-the-gfw)
-
 [在路由器上部署 shadowsocks](https://zzz.buzz/zh/gfw/2016/02/16/deploy-shadowsocks-on-routers/)
 
 [VPN 科学上网](https://haoel.github.io/)
