@@ -1,6 +1,6 @@
 # ASUS Merlin 路由器科学上网
 
-更新时间：2021年1月21日 :cat:
+更新时间：2022年1月21日 :cat:
 
 ## 准备工作
 
@@ -44,7 +44,7 @@ Merlin固件拥有更多的功能，由于第三方不断维护代码，各种�
 格式化 U 盘到 ext4 分区。假设 U 盘驱动器设备为 /dev/sda1 。
 
 ```
-# mkfs.ext4 /dev/sda1
+# mkfs.ext3 /dev/sda1
 ```
 
 ### 安装 Entware-ng
@@ -58,7 +58,7 @@ ssh admin@192.168.1.1
 安装 Entware-ng ，具体的安装说明看 Entware-ng 的 [Wiki](https://github.com/Entware-ng/Entware-ng/wiki/Install-on-asuswrt-merlin-firmware)。
 
 ```
-entware-setup.sh
+运行 amtm ，根据提示选择安装。
 ```
 
 提示选择 U 盘分区时，选择之前格式化的 U 盘，一般选择 1 。
@@ -307,8 +307,29 @@ PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
     "method":"aes-128-cfb"
 }
 ```
-
 其中，server 参数修改为 127.0.0.1，server_port 参数需要对应 kcptun 客户端的本地监听端口。
+
+**4.可选：允许外网访问KCPTUN**
+创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
+```
+#!/bin/sh
+
+iptables -I INPUT -p tcp --dport 8389 -j ACCEPT
+iptables -I OUTPUT -p tcp --sport 8389 -j ACCEPT
+```
+**5.如仅运行kcptun启动项加至 ``vi /jffs/scripts/services-start``**
+
+## 可能用到的命令
+```
+vi 编辑文件，按i编辑，退出编辑按ESC后“：wq”保存并退出，“:q!” 不保存并退出。
+chmod 设置文件属性 chchmod a+rx /jffs/scripts/*
+netstat 查看端口是否启用 netstat -antp | grep 8389
+iptables 查看转发规则是否生效 iptables -nvL --line-numbers | grep 8389
+uname -a  查看系统版本号
+df -h 查看系统分区信息
+fdisk -l 查看磁盘分区信息
+```
+
 
 ## 参考文档
 
