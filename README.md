@@ -239,7 +239,7 @@ cru a run-services "*/1 * * * *" "/jffs/scripts/services-start"
 下载 kcptun 最新 [release](https://github.com/xtaci/kcptun/releases)，需要根据路由器 CPU 架构来选择 arm 或者 mips 。
 
 ```
-wget -O /opt/etc/ https://github.com/xtaci/kcptun/releases/download/v20210922/kcptun-linux-arm7-20210922.tar.gz
+wget -O /opt/etc/kcptun-linux-arm7-20210922.tar.gz https://github.com/xtaci/kcptun/releases/download/v20210922/kcptun-linux-arm7-20210922.tar.gz
 tar xzvf /opt/etc/kcptun-linux-arm7-20210922.tar.gz -C /opt/bin/
 ```
 
