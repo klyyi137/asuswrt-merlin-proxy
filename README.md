@@ -322,7 +322,7 @@ iptables -I OUTPUT -p tcp --sport 8389 -j ACCEPT
 
 ## 可能用到的命令
 ```
-vi 编辑文件，按i编辑，退出编辑按ESC后``：wq``保存并退出，``:q!`` 不保存并退出。
+vi 编辑文件，按i编辑，退出编辑按ESC，:wq 保存并退出，:q! 不保存并退出。
 chmod 设置文件属性 chmod a+rx /jffs/scripts/*
 netstat 查看端口是否启用 netstat -antp | grep 8389
 iptables 查看转发规则是否生效 iptables -nvL --line-numbers | grep 8389
