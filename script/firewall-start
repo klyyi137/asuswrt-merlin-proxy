@@ -1,0 +1,4 @@
+#!/bin/sh
+
+iptables -I INPUT -p tcp --dport 8389 -j ACCEPT
+iptables -I OUTPUT -p tcp --sport 8389 -j ACCEPT
