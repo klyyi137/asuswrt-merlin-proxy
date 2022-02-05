@@ -272,8 +272,7 @@ tar xzvf /opt/etc/kcptun-linux-arm7-20210922.tar.gz -C /opt/bin/
 
 新建 S22kcptun 服务脚本 ``/opt/etc/init.d/S22kcptun``
 
-注: 1、梅林服务名必须是 “S” 开头,不然无法启动
-    2、遇执行时 not found 错误时 ，执行 ``vim /opt/etc/init.d/S22kcptun`` 后``:set ff=unix``
+* 注: 梅林服务名必须是 “S” 开头,不然无法启动
     
 ```
 #!/bin/sh
@@ -293,6 +292,8 @@ PATH=/opt/sbin:/opt/bin:/opt/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/u
 ```
 /opt/etc/init.d/S22kcptun start
 ```
+
+* 注：如果报 not found 错误，执行 ``vim /opt/etc/init.d/S22kcptun`` 后``:set ff=unix``
 
 **3. 修改 /opt/etc/shadowsocks.json 文件**
 
