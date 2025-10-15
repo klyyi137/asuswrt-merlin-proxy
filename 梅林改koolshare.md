@@ -2,8 +2,10 @@
 ```
 # 编辑文件，按i编辑，退出编辑按ESC，:wq 保存并退出，:q! 不保存并退出。
 vi /koolshare/ss/config.json
+
 # 设置文件属性
 chmod a+rx /jffs/scripts/*
+
 # 查看系统版本号
 uname -a
 # 查看应用适用系统版本
