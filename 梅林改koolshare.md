@@ -34,6 +34,8 @@ tr '\0' ' ' < /proc/11422/cmdline; echo
 ```
 
 ## fancyss - 科学上网
+
+**插件相关**
 ```
 # fancyss插件下载地址
 https://github.com/hq450/fancyss
@@ -42,21 +44,12 @@ https://github.com/hq450/fancyss
 /koolshare/bin/kcptun
 ```
 
-**可选：允许外网访问KCPTUN**
-创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
+**使用自己下载的kcptun，自动启动修改**``vi /jffs/scripts/services-start``
 ```
 #!/bin/sh
 
-iptables -I INPUT -p tcp --dport 1091 -j ACCEPT
-iptables -I OUTPUT -p tcp --sport 1091 -j ACCEPT
-```
-
-**自定义kcptun**
-修改``vi /jffs/scripts/services-start``
-```
-#!/bin/sh
 /koolshare/bin/ks-services-start.sh
-/koolshare/bin/kcptun -c /koolshare/kcptun.json
+/koolshare/bin/kcptun -c /koolshare/kcptun/kcptun.json
 ```
 
 **kcptun配置文件**
@@ -74,4 +67,13 @@ iptables -I OUTPUT -p tcp --sport 1091 -j ACCEPT
 	"rcvwnd": 1024,
 	"nocomp": true
 }
+```
+
+**可选：允许外网访问KCPTUN**
+创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
+```
+#!/bin/sh
+
+iptables -I INPUT -p tcp --dport 1091 -j ACCEPT
+iptables -I OUTPUT -p tcp --sport 1091 -j ACCEPT
 ```
