@@ -44,7 +44,8 @@ https://github.com/hq450/fancyss
 /koolshare/bin/kcptun
 ```
 
-**使用自己下载的kcptun，自动启动修改**``vi /jffs/scripts/services-start``
+**使用自己下载的kcptun**
+修改``vi /jffs/scripts/services-start``，设置开机启动。
 ```
 #!/bin/sh
 
@@ -69,7 +70,7 @@ https://github.com/hq450/fancyss
 ```
 
 **可选：允许外网访问KCPTUN**
-创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
+修改``vi /jffs/scripts/firewall-start``，设置开机自动开放kcptun端口。
 ```
 #!/bin/sh
 
