@@ -48,7 +48,6 @@ https://github.com/hq450/fancyss
 ```
 #!/bin/sh
 
-/koolshare/bin/ks-services-start.sh
 /koolshare/bin/kcptun -c /koolshare/kcptun/kcptun.json
 ```
 
