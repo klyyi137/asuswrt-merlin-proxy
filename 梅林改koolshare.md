@@ -30,6 +30,10 @@ kill -HUP 4034
 # 查看进程的完整 cmdline（\0 替换为空格）  PID=11422
 tr '\0' ' ' < /proc/11422/cmdline; echo
 ```
+## 梅林改下载地址
+```
+https://fw.koolcenter.com/
+```
 
 ## fancyss - 科学上网
 
