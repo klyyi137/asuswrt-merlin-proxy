@@ -23,8 +23,8 @@ netstat -tlpn | grep 1091
 
 # iptables 查看转发规则是否生效
 iptables -nvL --line-numbers | grep 1091
-# 重载进程 PID=4034
 
+# 重载进程 PID=4034
 kill -HUP 4034
 
 # 查看进程的完整 cmdline（\0 替换为空格）  PID=11422
