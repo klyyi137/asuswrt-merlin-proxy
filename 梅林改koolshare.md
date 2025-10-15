@@ -18,7 +18,7 @@ df -h
 # 查看磁盘分区信息
 fdisk -l
 
-# 查看端口是否启用 t=TCP协议,p=PID，n=数字显示端口
+# 查看端口是否启用 t=TCP协议，l=监听端口,p=PID，n=数字显示端口
 netstat -tlpn | grep 1091
 
 # iptables 查看转发规则是否生效
