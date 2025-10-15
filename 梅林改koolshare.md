@@ -10,8 +10,6 @@ chmod a+rx /jffs/scripts/*
 
 # 查看系统版本号
 uname -a
-
-# 查看应用适用系统版本
 uname -m
 
 # 查看系统分区信息
