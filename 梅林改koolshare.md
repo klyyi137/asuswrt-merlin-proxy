@@ -32,7 +32,9 @@ tr '\0' ' ' < /proc/11422/cmdline; echo
 ```
 
 **1.fancyss - 科学上网**
+```
 https://github.com/hq450/fancyss
+```
 
 **2.可选：允许外网访问KCPTUN**
 创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
