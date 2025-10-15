@@ -33,16 +33,45 @@ kill -HUP 4034
 tr '\0' ' ' < /proc/11422/cmdline; echo
 ```
 
-**1.fancyss - 科学上网**
+## fancyss - 科学上网
 ```
+# fancyss插件下载地址
 https://github.com/hq450/fancyss
+
+# kcptun二进制文件解压地址(使用fancyss提供的kcptun客户端)
+/koolshare/bin/kcptun
 ```
 
-**2.可选：允许外网访问KCPTUN**
+**可选：允许外网访问KCPTUN**
 创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
 ```
 #!/bin/sh
 
 iptables -I INPUT -p tcp --dport 1091 -j ACCEPT
 iptables -I OUTPUT -p tcp --sport 1091 -j ACCEPT
+```
+
+**自定义kcptun**
+修改``vi /jffs/scripts/services-start``
+```
+#!/bin/sh
+/koolshare/bin/ks-services-start.sh
+/koolshare/bin/kcptun -c /koolshare/kcptun.json
+```
+
+**kcptun配置文件**
+```
+{
+  "smuxver": 2, 
+	"localaddr": "0.0.0.0:1091",
+	"remoteaddr": "ip:12315-13315",
+	"key": "123456",
+	"crypt": "salsa20",
+	"mode": "fast",
+	"conn": 1,
+	"mtu": 1200,
+	"sndwnd": 1024,
+	"rcvwnd": 1024,
+	"nocomp": true
+}
 ```
