@@ -21,3 +21,12 @@ kill -HUP 4034
 # 查看进程的完整 cmdline（\0 替换为空格）  PID=11422
 tr '\0' ' ' < /proc/11422/cmdline; echo
 ```
+
+**1.可选：允许外网访问KCPTUN**
+创建firewall-start设置开机自动开放kcptun端口``vi /jffs/scripts/firewall-start``
+```
+#!/bin/sh
+
+iptables -I INPUT -p tcp --dport 1091 -j ACCEPT
+iptables -I OUTPUT -p tcp --sport 1091 -j ACCEPT
+```
