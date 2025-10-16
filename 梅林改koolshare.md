@@ -29,7 +29,11 @@ kill -HUP 4034
 
 # 查看进程的完整 cmdline（\0 替换为空格）  PID=11422
 tr '\0' ' ' < /proc/11422/cmdline; echo
+
+# 按文件内容搜索
+grep -r ":1091" /koolshare
 ```
+
 ## 梅林改下载地址
 ```
 https://fw.koolcenter.com/
