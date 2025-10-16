@@ -71,6 +71,12 @@ https://github.com/hq450/fancyss
 }
 ```
 
+**使用插件自带KCPTUN作为网桥**
+```
+插件默认kcptun本地地址固定为 127.0.0.1:1091 ，只接收本地转发来的数据。
+可选：接收外部数据需修改 /koolshare/ss/ssconfig.sh , 将 127.0.0.1:1091 修改为 0.0.0.0:1091 
+```
+
 **可选：允许外网访问KCPTUN**
 修改``vi /jffs/scripts/firewall-start``，设置开机自动开放kcptun端口。
 ```
