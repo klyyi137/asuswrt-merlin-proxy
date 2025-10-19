@@ -89,3 +89,13 @@ https://github.com/hq450/fancyss
 iptables -I INPUT -p tcp --dport 1091 -j ACCEPT
 iptables -I OUTPUT -p tcp --sport 1091 -j ACCEPT
 ```
+
+## 透明代理常用强制走代理地址
+```
+iyf.tv
+hlive.io
+dnvodcdn.me
+global-cdn.me
+anygate.vip
+pipecdn.vip
+```
