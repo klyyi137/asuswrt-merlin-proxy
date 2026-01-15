@@ -55,7 +55,7 @@ https://github.com/hq450/fancyss
 ```
 #!/bin/sh
 
-/koolshare/bin/kcptun -c /koolshare/kcptun/kcptun.json
+/koolshare/bin/kcptun/client_linux_arm7 -c /koolshare/kcptun/client.json
 ```
 
 **kcptun配置文件**
